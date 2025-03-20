@@ -1,35 +1,45 @@
-OwlEye - placeholder
+# 🦉 OwlEye - v0.1
 
-# Descripción
-OwlEye es una herramienta desarrollada en Node.js para simular técnicas de persistencia, comunicación cliente-servidor y extracción de datos con fines educativos.
+## 📋 Description
+OwlEye is an **educational** tool for learning about client-server interactions and screenshot capturing, built with **Node.js**, **Socket.IO**, and **screenshot-desktop**. It consists of a client (mouse) and a server (owl) for remote screenshot management.
 
-# Características
-- Persistencia: Se copia a la carpeta de arranque de Windows.
-- Ejecución sigilosa: Opera sin interfaz visible.
-- Comunicación: Usa WebSockets para conectar con un servidor local.
-- Funcionalidad: Captura pantallas bajo demanda y las envía al servidor.
+## ✨ Key Features
+- 📸 Remote screenshot capturing
+- 🖥️ Terminal-based server control
+- 🕶️ Stealth client execution (no visible console)
+- 📂 Screenshots saved in mouse_seen folder
+- ⚡ Real-time client-server communication
 
-# Advertencia Legal
-Este proyecto es estrictamente educativo. No me hago responsable por cualquier uso indebido o no autorizado.
-Úselo solo con permiso explícito del propietario del sistema y en entornos de prueba.
+## 🛠️ Installation
+```bash
+# Clone the repository
+git clone https://gitlab.com/VIfront/owl-eye.git
 
-# Requisitos
-- Node.js y npm instalados.
-- Dependencias: socket.io, socket.io-client, screenshot-desktop, express, pkg.
+# Install dependencies
+npm install
 
-# Instalación
-1. Clona el repositorio.
-2. Ejecuta `npm install` para instalar las dependencias.
-3. Configura la IP del servidor en `client.js`.
+# Run the server
+node owl.js
 
-# Uso
-1. Inicia el servidor: `node server.js`.
-2. Ejecuta el cliente: `OwlEye.exe` (generado con `pkg client.js --targets node14-win-x64 --output OwlEye.exe`).
-3. Usa la interfaz web en `http://localhost:3000` para enviar comandos.
+# Build the client executable for Windows (mouse)
+npm run build
+```
 
-# Autor
-Creado por [tu nombre o alias, si deseas incluirlo].
+## 🔧 Configuration
+1. Enter your ip in the .env:
+```
+SERVER_URL=http://<your-server-ip>:3000
+```
+2. Start the server `(node owl.js)`.
+3. Run the client `(owleye.exe)` in Windows.
+4. On the server terminal, select a client by number to request a screenshot.
 
+## 📝 Developer Notes
+- The `node_modules` folder is not included in the repository
+- Ensure Node.js and npm are installed on your system.
+- Run `npm install` after cloning the project
+- Screenshots are saved in the mouse_seen folder on the server.
 
-# Licencia
-Uso educativo únicamente.
+## 🔒 License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+For more details, see the [LICENSE](LICENSE) file in the repository.
