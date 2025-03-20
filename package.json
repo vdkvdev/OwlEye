@@ -1,11 +1,11 @@
 {
   "name": "owleye",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "mouse.js", // Cambiado de "client.js" a "mouse.js"
+  "main": "mouse.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pkg ."
+    "build": "pkg mouse.js"
   },
   "keywords": [],
   "author": "",
